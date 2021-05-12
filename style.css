@@ -1,0 +1,217 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    max-height: 100%;
+}
+
+/*Nav*/
+.nav {
+    font-size: 13px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    cursor: pointer;
+}   
+
+.nav li {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 10px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nav li img{
+    position: absolute;
+    margin-top: -10px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.nav li img:hover{
+    opacity: 1;
+}
+
+.nav li button{
+    background-color:#4285f4;
+    width: 4.8em;
+    height: 2.2em;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border-radius: 2px;
+    border: none;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.nav li button:hover{
+    border-radius: 2px;
+    border: none;
+    cursor:default;
+}
+
+/*search*/
+main{
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.center{
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 7em;
+    place-items: center;
+    align-items: center;
+}
+
+.logo{
+    max-width: 272px;
+}
+
+input[type=text] {
+    background-color: white;
+    background-image: url('images/loupe.png');
+    background-position: 10px 10px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    box-sizing: border-box;
+    margin-top: 2em;
+    border: 1px solid lightgray;
+    border-radius: 3em;
+    height: 3em;
+    width: 90%;
+    max-width: 600px;
+    outline: 0;
+}
+
+#btn{
+    border-color: transparent;
+    width: 9em;
+    height: 2.5em;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    background-color: rgb(248, 249, 250);
+    margin-right: 0.5em;
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+#btn:hover{
+    border: 1px solid rgba(92, 92, 92, 0.87);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/*Footer*/
+a{
+    text-decoration: none;
+    color: #5f6368;
+}
+
+.local{
+    border-top: 1px solid #dadce0;
+}
+
+.footer{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+}
+
+.local{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 10px 12px;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #5f6368;
+    padding: 10px;
+}
+
+.right a:not(:first-child){
+    margin-left: 27px;
+}
+
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #5f6368;
+    padding: 10px;
+}
+
+.left a:not(:first-child){
+    margin-left: 27px;
+}
+
+.line{
+    border-top: 1px solid #dadce0;
+}
+/* mobile */
+@media (max-width: 271px){
+    #btn{
+       display: none;
+  }
+}
+
+@media (max-width: 250px){
+    .nav{
+        display:none;
+   }
+   .logo{
+    max-width: 150px;
+    }
+}
+
+@media (min-width: 721px){
+    .line{
+        min-width: 980px;
+        min-width: 400px;
+        flex-wrap: wrap;
+    }
+         
+    .line ul{
+        display:flex;
+    }
+    
+    footer .left{
+        float: left;
+    }
+    
+    footer .right{
+        float: right;
+    }
+    span, .left{
+        margin-left: 1em;
+    }
+}
